@@ -9,15 +9,15 @@ export interface Config {
   /**
    * TypeScript's compiler options
    */
-  compilerOptions: ts.CompilerOptions;
+  compilerOptions?: ts.CompilerOptions;
   /**
    * Allow the transformer to strip `debugger;` statements
    */
-  debugger: boolean;
+  debugger?: boolean;
   /**
    * List of `console` methods to ignore when stripping `console` statements.
    */
-  exclude: string[];
+  exclude?: string[];
 }
 
 function getScriptKind(filename: string): ts.ScriptKind {
@@ -139,10 +139,13 @@ export function stripDebuggers(
   config: Config = defaultConfig,
   path: string = 'index.ts'
 ): string {
+  const compilerOptions =
+    config.compilerOptions ?? ts.getDefaultCompilerOptions();
+
   const sourceFile = ts.createSourceFile(
     basename(path),
     text,
-    config.compilerOptions.target || ts.ScriptTarget.ES2015,
+    compilerOptions.target || ts.ScriptTarget.ES2015,
     false,
     getScriptKind(path)
   );

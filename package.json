@@ -16,7 +16,8 @@
   "devDependencies": {
     "@namchee/eslint-config": "^2.0.9",
     "@types/node": "^20.11.5",
-    "eslint": "^8.56.0"
+    "eslint": "^8.56.0",
+    "vitest": "^1.2.1"
   },
   "engines": {
     "npm": "please-use-pnpm",
