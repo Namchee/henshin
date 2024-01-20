@@ -96,7 +96,7 @@ const defaultConfig: Config = {
  * @returns A transformer instance that strips debug statements from a TypeScript
  * source file. Do note that this transformer might leave dangling statements.
  */
-export function stripTransformer(
+export function createStripDebugTransformer(
   config: Config = defaultConfig
 ): ts.TransformerFactory<ts.SourceFile> {
   return (ctx: ts.TransformationContext) => {
@@ -134,7 +134,7 @@ export function stripTransformer(
  * @param {string[]} config.exclude List of `console` methods to ignore when stripping `console` statements.
  * @returns {string} processed source file without debugger statements.
  */
-export function stripDebuggers(
+export function stripDebug(
   text: string,
   config: Config = defaultConfig,
   path: string = 'index.ts'
@@ -157,7 +157,7 @@ export function stripDebuggers(
 
   const transformer = ts.transform(
     sourceFile,
-    [stripTransformer(config)],
+    [createStripDebugTransformer(config)],
     config.compilerOptions
   );
   return printer.printNode(
