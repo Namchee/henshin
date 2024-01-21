@@ -61,13 +61,7 @@ const sourceFile = `const add = (a: number, b: number) => a + b;
 
 add(1, 2);
 console.log('Hello World!');
-`
-
-const config = {
-    compilerOptions: {
-        target: ts.ScriptTarget.ESNext, 
-    },
-};
+`;
 const transformer = createStripDebugTransformer(config);
 
 /*
@@ -87,6 +81,24 @@ const result = ts.transpileModule(sourceFile, {
 
 A helper function that strips debugger statement `source` using compilation options provided in `config`.
 
+```ts
+import { stripDebug } from '@namchee/henshin-strip-debug';
+
+const sourceFile = `const add = (a: number, b: number) => a + b;
+
+add(1, 2);
+console.log('Hello World!');
+`;
+
+/*
+ * const add = (a: number, b: number) => a + b;
+ *
+ * add(1, 2);
+ * void 0;
+ */
+const result = stripDebug(sourceFile); 
+```
+
 ## Configuration
 
 | Name              | Type              | Default                  | Description                                                                                                                                                                                                                                                                |
@@ -94,6 +106,18 @@ A helper function that strips debugger statement `source` using compilation opti
 | `compilerOptions` | `CompilerOptions` | `{ "target": "ES2015" }` | TypeScript compiler options to be used on transformation process. Will be ignored by `createStripDebugTransformer`. Please refer to the [official documentation](https://www.typescriptlang.org/tsconfig#compilerOptions) for more information regarding supported values. |
 | `debugger`        | `boolean`         | `true`                   | Strips `debugger` statements from the source.                                                                                                                                                                                                                              |
 | `exclude`         | `string[]`        | `[]`                     | List of `console` methods that should not be stripped by the transformer. For example, filling this options with `['table']` will not strip `console.table` calls.                                                                                                         |
+
+If omitted, the transformer will use the following configuration:
+
+```ts
+const config = {
+    compilerOptions: {
+        target: ts.ScriptTarget.ES2015,
+    },
+    exclude: [],
+    debugger: true,
+};
+```
 
 ## FAQ
 
