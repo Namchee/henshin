@@ -126,16 +126,17 @@ export function createStripDebugTransformer(
  * Strip debugger statements from the given source text. Do note that this
  * transformer might leave dangling statements.
  *
- * @param {string} text Source file to be modified
+ * @param {string} source Source file to be modified
  * @param {Config} config Configuration object, may be omitted
  * @param {ts.CompilerOptions} config.compilerOptions TypeScript's compiler options. If not present,
  * will use the default options with `target` set to `ES2015`
  * @param {boolean} config.debugger Allows the transformer to strip `debugger` statements.
  * @param {string[]} config.exclude List of `console` methods to ignore when stripping `console` statements.
+ * @param {string} path Path to source file, used to identify target output.
  * @returns {string} processed source file without debugger statements.
  */
 export function stripDebug(
-  text: string,
+  source: string,
   config: Config = defaultConfig,
   path: string = 'index.ts'
 ): string {
@@ -144,7 +145,7 @@ export function stripDebug(
 
   const sourceFile = ts.createSourceFile(
     basename(path),
-    text,
+    source,
     compilerOptions.target || ts.ScriptTarget.ES2015,
     false,
     getScriptKind(path)

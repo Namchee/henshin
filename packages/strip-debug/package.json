@@ -1,5 +1,5 @@
 {
-  "name": "@namchee/ts-strip-debug",
+  "name": "@namchee/ts-transformer-strip-debug",
   "version": "1.0.0",
   "description": "TypeScript transformers that strips debugger statements, include console statements",
   "main": "index.js",

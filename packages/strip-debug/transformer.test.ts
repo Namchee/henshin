@@ -13,7 +13,7 @@ function transformFile(path: string, config?: Config): string {
     resolve(__dirname, 'fixtures', path)
   ).toString();
 
-  return stripDebug(contents, config, path);
+  return stripDebug(contents, config);
 }
 
 test('should strip console statements', () => {
@@ -57,7 +57,7 @@ test.skip('should change nothing', () => {
   ).toString();
   const result = transformFile('no-change.ts');
 
-  expect(original).toBe(result);
+  expect(result).toBe(original);
 });
 
 test('should strip console statements written in ternary', () => {
