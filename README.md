@@ -1,6 +1,6 @@
-# TS Henshin
+# Henshin
 
-Collection of TypeScript custom transformers for various uses. Written by myself.
+Collection of TypeScript custom transformers for various uses. Browse the [packages](./packages) for list of available transformers.
 
 ## Usage
 
