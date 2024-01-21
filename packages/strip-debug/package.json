@@ -1,11 +1,17 @@
 {
-  "name": "@namchee/ts-transformer-strip-debug",
+  "name": "@namchee/henshin-strip-debug",
   "version": "1.0.0",
+  "private": false,
   "description": "TypeScript transformers that strips debugger statements, include console statements",
-  "main": "index.js",
+  "main": "transformer.js",
   "type": "module",
-  "scripts": {},
-  "keywords": [],
-  "author": "",
+  "scripts": {
+    "build": "tsc transformer.ts"
+  },
+  "keywords": [
+    "typescript",
+    "transformer"
+  ],
+  "author": "Cristopher",
   "license": "MIT"
 }
