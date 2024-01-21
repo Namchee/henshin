@@ -13,5 +13,9 @@
     "transformer"
   ],
   "author": "Cristopher",
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }
