@@ -1,6 +1,14 @@
 # Henshin
 
-Collection of TypeScript custom transformers for various uses. Browse the [packages](./packages) for list of available transformers.
+Collection of TypeScript custom transformers for various uses. 
+
+## Transformers
+
+Below are the list of available transformers in [packages](./packages). All transformers can be installed through `@namchee/henshin-<transformer_name>`.
+
+| Name                                  | Description                                                                                                                             |
+| ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| [`strip-debug`](packages/strip-debug) | Replaces debugging statements with [void expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void) |
 
 ## Usage
 
@@ -19,7 +27,7 @@ There are 4 ways to consume the transformers:
    Some bundlers provides way to consume custom transformers through plugins such as [`webpack` via `ts-loader`](https://github.com/TypeStrong/ts-loader#getcustomtransformers) or [`ttypescript` plugin for `parcel` and `rollup`](https://github.com/cevek/ttypescript#parcel)
 
 
-4. **Use the provided helper function**
+3. **Helper function**
 
    For convenience, every transformers in Henshin exposes a helper function besides transformer factory that takes care of the transformation process by simply providing the file contents and options. Please refer to each package `README.md` for more information about helper functions.
 
