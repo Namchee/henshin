@@ -4,11 +4,11 @@ Collection of TypeScript custom transformers for various uses. Browse the [packa
 
 ## Usage
 
-There are 3 ways to consume the transformers:
+There are 4 ways to consume the transformers:
 
 1. **CLI Wrapper**
 
-   Unfortunately, TypeScript [does not support custom transformers](https://github.com/microsoft/TypeScript/issues/14419) by default. The community addresses this issue by providing a CLI wrapper that augments the functionality of `tsc`. such as [`ttypescript`](https://github.com/cevek/ttypescript) and [`ts-patch`](https://github.com/nonara/ts-patch).
+   By default, TypeScript [does not support custom transformers](https://github.com/microsoft/TypeScript/issues/14419) by default. The community addresses this issue by providing a CLI wrapper that augments the functionality of `tsc`. such as [`ttypescript`](https://github.com/cevek/ttypescript) and [`ts-patch`](https://github.com/nonara/ts-patch).
 
 2. **Compiler API**
     
@@ -21,7 +21,7 @@ There are 3 ways to consume the transformers:
 
 4. **Use the provided helper function**
 
-   Since it's a hassle to use custom transformers in TypeScript, every transformers exposes a helper function besides transformer factory that takes care of the transformation process by simply providing the file contents and options. Please refer to each package `README.md` for more information about helper functions.
+   For convenience, every transformers in Henshin exposes a helper function besides transformer factory that takes care of the transformation process by simply providing the file contents and options. Please refer to each package `README.md` for more information about helper functions.
 
 ## License
 
