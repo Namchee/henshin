@@ -2,13 +2,11 @@
   "name": "henshin",
   "version": "",
   "description": "Collection of TypeScript custom transformers for various uses. ",
-  "main": "",
-  "type": "module",
   "scripts": {
     "lint": "eslint packages/*",
     "test": "vitest",
     "build": "pnpm -r build",
-    "publish": "pnpm -r publish",
+    "publish": "pnpm -r publish --no-git-checks",
     "publish:dry": "pnpm -r publish --dry-run"
   },
   "keywords": [],
