@@ -26,11 +26,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build the transformers
-        run: pnpm -r run build
+      - name: Build all transformers
+        run: pnpm run build
 
       - name: Publish transformers
         shell: bash
-        run: pnpm -r publish
+        run: pnpm run publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
