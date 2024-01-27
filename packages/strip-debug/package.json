@@ -7,7 +7,7 @@
   "types": "./dist/transformer.d.ts",
   "description": "TypeScript transformers that strips debugger statements, include consoling statements",
   "scripts": {
-    "build": "tsc transformer.ts --declaration --module=esnext"
+    "build": "tsc"
   },
   "author": {
     "name": "Cristopher",

@@ -6,7 +6,10 @@
   "type": "module",
   "scripts": {
     "lint": "eslint packages/*",
-    "test": "vitest"
+    "test": "vitest",
+    "build": "pnpm -r build",
+    "publish": "pnpm -r publish",
+    "publish:dry": "pnpm -r publish --dry-run"
   },
   "keywords": [],
   "author": "",

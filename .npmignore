@@ -1,0 +1,4 @@
+packages/**/*.test.ts
+packages/**/fixtures
+
+packages/**/tsconfig.json
