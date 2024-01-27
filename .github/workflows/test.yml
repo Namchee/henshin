@@ -1,8 +1,6 @@
-name: Publish transformers package
+name: Run test for transfomers
 
-on:
-  release:
-    types: [published]
+on: pull_request
 
 jobs:
   build:
@@ -26,11 +24,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build the transformers
-        run: pnpm -r run build
-
-      - name: Publish transformers
-        shell: bash
-        run: pnpm publish packages --access public --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Run tests for all transformers
+        run: pnpm run test

@@ -1,21 +1,36 @@
 {
   "name": "@namchee/henshin-strip-debug",
-  "version": "1.0.0",
-  "private": false,
-  "description": "TypeScript transformers that strips debugger statements, include console statements",
-  "main": "transformer.js",
+  "version": "1.0.1",
   "type": "module",
+  "private": false,
+  "main": "./dist/transformer.js",
+  "types": "./dist/transformer.d.ts",
+  "description": "TypeScript transformers that strips debugger statements, including console statements",
   "scripts": {
-    "build": "tsc transformer.ts"
+    "build": "tsc"
   },
+  "author": {
+    "name": "Cristopher",
+    "email": "cristophernamchee12@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Namchee/henshin.git"
+  },
+  "bugs": "https://github.com/Namchee/henshin/issues",
+  "homepage": "https://github.com/Namchee/henshin/packages/strip-debug",
   "keywords": [
     "typescript",
     "transformer"
   ],
-  "author": "Cristopher",
   "license": "MIT",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "engines": {
+    "npm": "please-use-pnpm",
+    "yarn": "please-use-pnpm",
+    "pnpm": ">=8"
   }
 }
