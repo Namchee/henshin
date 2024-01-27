@@ -3,11 +3,11 @@
   "version": "1.0.1",
   "type": "module",
   "private": false,
-  "main": "transformer.js",
-  "types": "",
+  "main": "./dist/transformer.js",
+  "types": "./dist/transformer.d.ts",
   "description": "TypeScript transformers that strips debugger statements, include consoling statements",
   "scripts": {
-    "build": "tsc transformer.ts --declaration"
+    "build": "tsc transformer.ts --declaration --module=esnext"
   },
   "author": {
     "name": "Cristopher",

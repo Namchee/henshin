@@ -1,6 +1,6 @@
 {
-  "name": "@namchee/henshin-strip-dead",
-  "version": "1.0.0",
+  "name": "@namchee/henshin-strip-empty",
+  "version": "",
   "description": "",
   "main": "index.js",
   "scripts": {

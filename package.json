@@ -1,8 +1,8 @@
 {
   "name": "henshin",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "",
+  "description": "Collection of TypeScript custom transformers for various uses. ",
+  "main": "",
   "type": "module",
   "scripts": {
     "lint": "eslint packages/*",
