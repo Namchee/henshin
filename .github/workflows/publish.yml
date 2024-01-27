@@ -31,6 +31,6 @@ jobs:
 
       - name: Publish transformers
         shell: bash
-        run: pnpm publish packages --access public --no-git-checks
+        run: pnpm -r publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
