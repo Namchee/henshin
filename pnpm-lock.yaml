@@ -25,9 +25,9 @@ importers:
         specifier: ^1.2.1
         version: 1.2.1(@types/node@20.11.5)
 
-  packages/strip-console: {}
-
   packages/strip-debug: {}
+
+  packages/strip-empty: {}
 
 packages:
 
