@@ -5,7 +5,7 @@
   "private": false,
   "main": "./dist/transformer.js",
   "types": "./dist/transformer.d.ts",
-  "description": "TypeScript transformers that strips debugger statements, include consoling statements",
+  "description": "TypeScript transformers that strips debugger statements, including console statements",
   "scripts": {
     "build": "tsc"
   },
