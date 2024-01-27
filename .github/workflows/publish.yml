@@ -24,10 +24,10 @@ jobs:
           registry-url: https://registry.npmjs.org
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm -r install --frozen-lockfile
 
       - name: Build the transformers
-        run: pnpm run -r build
+        run: pnpm -r run build
 
       - name: Publish transformers
         shell: bash

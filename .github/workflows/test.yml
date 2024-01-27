@@ -1,7 +1,6 @@
 name: Run test for transfomers
 
-on:
-  pull_request
+on: pull_request
 
 jobs:
   build:
@@ -23,7 +22,7 @@ jobs:
           registry-url: https://registry.npmjs.org
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm -r install --frozen-lockfile
 
-      - name: Build the transformers
-        run: pnpm run test
+      - name: Run tests for all transformers
+        run: pnpm -r run test
